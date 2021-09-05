@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import history from "./routes/history";
+import { Router } from "react-router-dom";
+import { Routes } from './routes';
+import "./styles/vars.scss";
+import "./styles/globals.scss";
+import { CartProvider } from './contexts/cart/CartContext';
+import { UiProvider } from './contexts/ui/UiContext';
+import { AuthProvider } from './contexts/auth/AuthContext';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+      <UiProvider>
+        <CartProvider>
+          <AuthProvider>
+            <Routes />
+            {/* <ToastContainer autoClose={5000}  /> */}
+          </AuthProvider>
+        </CartProvider>
+      </UiProvider>
+    </Router>
   );
 }
 

@@ -1,0 +1,21 @@
+#Home {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  div:first-child {
+    .logout {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 10px 0;
+      button {
+        display: flex;
+        align-items: center;
+        border: none;
+        font-size: 1.5rem;
+        svg {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

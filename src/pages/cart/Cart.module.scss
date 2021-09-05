@@ -1,0 +1,125 @@
+#Cart {
+  background: var(--background);
+  border-radius: 4px;
+
+  .emptyBasket {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .container {
+    background-color: #fff;
+    margin: auto;
+    padding: 25px;
+    width: 60%;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px 15px;
+      border-bottom: 1px solid #f1f1f1;
+
+      img {
+        height: 100px;
+      }
+
+      strong {
+        color: #333;
+        display: block;
+      }
+
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.125rem;
+        font-weight: bold;
+      }
+
+      .buttonIcon {
+        background: none;
+        border: 0;
+        padding: 6px;
+
+        svg {
+          color: var(--primary);
+          transition: color 0.2s;
+        }
+
+        &:hover {
+          svg {
+            color: #fcc343;
+          }
+        }
+
+        &:disabled {
+          svg {
+            color: #fcc343;
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      .containerAddRemove {
+        display: flex;
+        align-items: center;
+
+        input {
+          border: 1px solid var(--text);
+          border-radius: 4px;
+          color: var(--text);
+          padding: 6px;
+          width: 50px;
+        }
+
+        button {
+          @extend .buttonIcon;
+        }
+      }
+      .buttonDelete {
+        button {
+          @extend .buttonIcon;
+        }
+      }
+    }
+    .footer {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: none;
+
+      button {
+        background: var(--primary);
+        color: var(--on-primary);
+        border: 0;
+        border-radius: 4px;
+        padding: 12px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background 0.2s;
+
+        &:hover {
+          background: #fcc343;
+        }
+      }
+      .total {
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 0.875rem;
+          color: var(--text);
+          margin-right: 10px;
+        }
+        strong {
+          font-size: 1.5rem;
+          color: var(--on-primary);
+        }
+      }
+    }
+  }
+}

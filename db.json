@@ -1,0 +1,67 @@
+{
+    "stock": [
+      {
+        "id": 1,
+        "amount": 3
+      },
+      {
+        "id": 2,
+        "amount": 5
+      },
+      {
+        "id": 3,
+        "amount": 11
+      },
+      {
+        "id": 4,
+        "amount": 6
+      },
+      {
+        "id": 5,
+        "amount": 5
+      },
+      {
+        "id": 6,
+        "amount": 10
+      }
+    ],
+    "fruits": [
+      {
+        "id": 1,
+        "title": "Maçã",
+        "price": 2,
+        "image": "https://i1.wp.com/www.felizmelhoridade.com.br/wp-content/uploads/2018/04/Ma%C3%A7%C3%A3-%E2%80%93-Formas-de-comer-e-indica%C3%A7%C3%B5es.jpg?fit=1024%2C978&ssl=1"
+      },
+      {
+        "id": 2,
+        "title": "Pera",
+        "price": 3.50,
+        "image": "https://static9.depositphotos.com/1642482/1148/i/600/depositphotos_11489464-stock-photo-pears.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Banana",
+        "price": 1.9,
+        "image": "https://hiperideal.vteximg.com.br/arquivos/ids/171306-1000-1000/12696.jpg?v=636626179776100000"
+      },
+      {
+        "id": 5,
+        "title": "Abacaxi",
+        "price": 4.8,
+        "image": "https://cd.shoppub.com.br/cenourao/media/cache/7d/dc/7ddcf04db9666b50ce4a4d43c23177eb.png"
+      },
+      {
+        "id": 6,
+        "title": "Manga",
+        "price": 2.60,
+        "image": "https://www.teclasap.com.br/wp-content/uploads/2007/03/manga.png"
+      },
+      {
+        "id": 4,
+        "title": "Uva",
+        "price": 6.20,
+        "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/746/397/products/uva-brs-isis-sem-semente1-4117fb3e4898b50a5a16102264065112-1024-1024.jpg"
+      }
+    ]
+  }
+  

@@ -1,0 +1,42 @@
+#toastFullScreen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#toastFullScreen .container {
+    margin: 16px;
+    display: flex;
+    flex: 1;
+    /* background-color: aqua; */
+}
+
+#toastFullScreen .content {
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    /* background-color: #123; */
+    color: #fff;
+}
+
+#toastFullScreen .icon {
+    /* font-size: xx-large; */
+    margin: auto;
+}
+
+#toastFullScreen .message {
+    font-size: large;
+    margin: auto;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+#toastFullScreen .actionButton {
+    margin-top: 16px;
+    border: 1px solid #fff;
+    font-size: large;
+    color: #fff
+}

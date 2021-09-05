@@ -1,0 +1,25 @@
+@import "./main";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--background);
+}
+
+body, input, button {
+  font: 14px Roboto, sans-serif;
+}
+
+#root {
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
