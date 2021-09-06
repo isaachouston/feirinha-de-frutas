@@ -4,7 +4,7 @@ Um aplicativo que simula um e-commerce de venda de frutas.
 
 ### :straight_ruler: Arquitetura:
 
-![marketplace](![estrutura](https://user-images.githubusercontent.com/43249054/132148652-3bb13c51-fd13-48f1-bc9f-8c11fa688164.PNG)
+(![estrutura](https://user-images.githubusercontent.com/43249054/132148652-3bb13c51-fd13-48f1-bc9f-8c11fa688164.PNG)
 
 ### :bulb: Funcionalidades:
 
