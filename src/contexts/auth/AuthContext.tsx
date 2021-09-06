@@ -39,7 +39,6 @@ export const AuthProvider: FC = ({ children }) => {
 
     const history = useHistory();
 
-
     useEffect(() => {
         if (token) {
             setIsAuth(true)
