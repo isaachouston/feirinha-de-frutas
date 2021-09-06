@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useCart } from '../../contexts/cart/CartContext';
 import { IFruitsResponse } from '../../interfaces/IFruits'
 import { formatPrice } from '../../util/format';
@@ -8,9 +8,6 @@ import pdfFonts from 'pdfmake/build/vfs_fonts.js';
 export const UseCartFruit = () => {
 
     const { cart, removeFruit, updateFruitAmount } = useCart();
-
-    const [basketFruit, setBasketFruit] = useState<IFruitsResponse[]>([])
-
 
     const cartFormatted = cart.map(fruit => ({
         ...fruit,
@@ -73,23 +70,17 @@ export const UseCartFruit = () => {
 
             },
             layout: 'lightHorizontalLines'
-
         }]
-
 
         const doc: any = {
             pageSize: 'A4',
             pageMargins: [15, 50, 15, 40],
             header: [reportTitle],
             content: [details]
-
         }
 
         pdfMake.createPdf(doc).download();
-
     }
-
-
 
     return (
         {
