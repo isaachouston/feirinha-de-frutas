@@ -47,3 +47,8 @@ E excute na pasta do projeto:
 ```
 yarn start
 ```
+Acesso:
+```
+login: framework
+senha: framework
+```
