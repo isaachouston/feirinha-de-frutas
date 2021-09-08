@@ -3,11 +3,11 @@
   flex: 1;
   flex-direction: column;
   div:first-child {
-    .logout {
+    .headerHome {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       padding: 10px 10px 0;
-      button {
+      .buttonLogout {
         display: flex;
         align-items: center;
         border: none;
@@ -15,6 +15,9 @@
         svg {
           margin-left: 5px;
         }
+      }
+      >div {
+        width: 200px;
       }
     }
   }

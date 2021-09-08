@@ -10,7 +10,7 @@ import { MdExitToApp } from 'react-icons/md';
 
 export const Home = () => {
 
-    const { handleAddFruit, cartItemsAmount, filteredFruits } = UseHome();
+    const { handleAddFruit, cartItemsAmount, filteredFruits, getOptionSelected, getOptionLabel, handleChangeFilter } = UseHome();
     const {
         handleLogout
     } = useAuth();
@@ -18,22 +18,24 @@ export const Home = () => {
     return (
         <div id={styles.Home}>
             <div>
-                <div className={styles.logout}>
-                    <button onClick={handleLogout}>
+                <div className={styles.headerHome}>
+                    <Autocomplete
+                        id="free-solo-demo"
+                        freeSolo
+                        options={filteredFruits}
+                        getOptionLabel={getOptionLabel}
+                        getOptionSelected={getOptionSelected}
+                        onChange={handleChangeFilter}
+                        renderInput={(params) => (
+                            <TextField {...params} label="Pesquisar fruta" margin="normal" variant="outlined" />
+                        )}
+                    />
+                    <button className={styles.buttonLogout} onClick={handleLogout}>
                         sair
                         <MdExitToApp />
                     </button>
                 </div>
-                {/* <Autocomplete
-                    id="free-solo-demo"
-                    freeSolo
-                    options={filteredFruits}
-                    getOptionLabel={(option: IFruitsResponse) => option.title}
-                   // getOptionSelected={}
-                    renderInput={(params) => (
-                        <TextField {...params} label="freeSolo" margin="normal" variant="outlined" />
-                    )}
-                /> */}
+
             </div>
             <CardFruit
                 fruitList={filteredFruits}

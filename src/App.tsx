@@ -7,7 +7,6 @@ import "./styles/globals.scss";
 import { CartProvider } from './contexts/cart/CartContext';
 import { UiProvider } from './contexts/ui/UiContext';
 import { AuthProvider } from './contexts/auth/AuthContext';
-import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -15,8 +14,7 @@ function App() {
       <UiProvider>
         <CartProvider>
           <AuthProvider>
-            <Routes />
-            {/* <ToastContainer autoClose={5000}  /> */}
+            <Routes />           
           </AuthProvider>
         </CartProvider>
       </UiProvider>

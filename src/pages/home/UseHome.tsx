@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import { AutocompleteChangeReason } from '@material-ui/lab';
+import React, { useCallback, useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 import { useCart } from '../../contexts/cart/CartContext';
 import { useUi } from '../../contexts/ui/UiContext';
@@ -38,26 +39,38 @@ export const UseHome = () => {
         addFruit(id)
     }
 
-    // const onChangeFilter = (
-    //     _event: React.ChangeEvent<{}>,
-    //     value: string | IFruitsResponse | null
-    //   ) => {
-    //     if (typeof value === "object") {
-    //       if (value === null) {
-    //         filteredFruits([]);
-    //       } else {
-    //         filteredFruits(value);
-    //       }
-    //     }
-    //   };
+
+    const getOptionSelected = (
+        option: IFruitsResponse,
+        value: IFruitsResponse
+    ) => {
+        return option.title === value.title;
+    };
+
+    const getOptionLabel = (option: IFruitsResponse) => option.title;
+
+    const handleChangeFilter = (_event: React.ChangeEvent<{}>, value: string | IFruitsResponse | null, _reason: AutocompleteChangeReason) => {
+
+        if (typeof value === "object") {
+            if (value === null) {
+                setFilterFruits(fruits);
+            } else {
+                setFilterFruits([value]);
+            }
+        }
+        console.log('filter', value);
+
+    };
 
     return (
-        {            
+        {
             setFruits,
             cartItemsAmount,
             handleAddFruit,
-            // handleChangeFilter,
-            filteredFruits
+            filteredFruits,
+            getOptionSelected,
+            getOptionLabel,
+            handleChangeFilter
         }
     )
 }

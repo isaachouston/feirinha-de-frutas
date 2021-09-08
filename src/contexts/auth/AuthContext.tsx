@@ -40,9 +40,17 @@ export const AuthProvider: FC = ({ children }) => {
     const history = useHistory();
 
     useEffect(() => {
-        if (token) {
-            setIsAuth(true)
+
+        const verifyAuth = () => {
+
+            const localStoreToken = localStorage.getItem('token')
+
+            if (localStoreToken) {
+                setIsAuth(true)
+                history.push('/')
+            }
         }
+        verifyAuth();
     }, [])
 
     const onClickLogin = useCallback(
@@ -63,7 +71,7 @@ export const AuthProvider: FC = ({ children }) => {
 
     const handleSubmit = useCallback((ev: FormEvent<HTMLFormElement>) => {
         ev.preventDefault();
-        const { token } = onClickLogin(values.password, values.password);
+        const { token } = onClickLogin(values.userName, values.password);
 
         if (token) {
             localStorage.setItem('token', JSON.parse(token))
